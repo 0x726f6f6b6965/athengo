@@ -69,7 +69,7 @@ func (c *athenaClient) ExecQuery(ctx context.Context, query string) (Rows, error
 	}
 
 	if waitErr := c.waitOnQuery(ctx, queryId); waitErr != nil {
-		return nil, err
+		return nil, waitErr
 	}
 
 	r, err := NewRows(c.GetAthenaApi(), queryId)

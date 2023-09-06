@@ -46,6 +46,16 @@ func NewAthenaClientWithSession(conn *session.Session, cfg *config.AthenaConfig)
 	return client
 }
 
+func NewAthenaClientWithAPI(api athenaiface.AthenaAPI, cfg *config.AthenaConfig) AthenaClient {
+	client := &athenaClient{
+		athena:         api,
+		database:       cfg.DbName,
+		outputLocation: cfg.OutputLocation,
+		pollFrequency:  cfg.PollFrequency,
+	}
+	return client
+}
+
 func (c *athenaClient) GetAthenaApi() athenaiface.AthenaAPI {
 	return c.athena
 }

@@ -1,15 +1,14 @@
 module athengo
 
-go 1.21.0
+go 1.18
 
 require (
-	github.com/aws/aws-sdk-go v1.45.2
-	github.com/stretchr/testify v1.8.4
+	github.com/aws/aws-sdk-go v1.28.14
+	github.com/stretchr/testify v1.2.2
 )
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
-	github.com/jmespath/go-jmespath v0.4.0 // indirect
+	github.com/jmespath/go-jmespath v0.0.0-20180206201540-c2b33e8439af // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
